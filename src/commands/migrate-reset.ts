@@ -8,9 +8,9 @@ export default function (payload: Payload) {
       throw new Error("No database adapter found");
     }
     try {
-      await adapter.migrateFresh({ forceAcceptWarning: false });
+      await adapter.migrateReset();
     } catch (error: any) {
-      throw new Error(`Error running migrate:fresh: ${error.message}`);
+      throw new Error(`Error running migrate:reset: ${error.message}`);
     }
     process.exit(0);
   };

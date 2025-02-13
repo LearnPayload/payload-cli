@@ -5,13 +5,34 @@ import { Command } from "commander";
 import { getPayload } from "payload";
 
 const availableCommands = [
-  //   { name: "migrate", description: "" },
-  //   { name: "migrate:create", description: "" },
-  //   { name: "migrate:down", description: "" },
-  //   { name: "migrate:refresh", description: "" },
-  //   { name: "migrate:reset", description: "" },
-  //   { name: "migrate:status", description: "" },
-  { name: "migrate:fresh", description: "dddd" },
+  {
+    name: "migrate",
+    description: "Run any migrations that have not yet been run",
+  },
+  {
+    name: "migrate:create",
+    description: "Create a new migration file in the migrations directory. ",
+  },
+  {
+    name: "migrate:down",
+    description: "Roll back the last batch of migrations.",
+  },
+  {
+    name: "migrate:refresh",
+    description:
+      "Roll back all migrations that have been run, and run them again.",
+  },
+  { name: "migrate:reset", description: "Roll back all migrations" },
+  {
+    name: "migrate:status",
+    description:
+      "Check the status of migrations and output a table of which migrations have been run, and which migrations have not yet run",
+  },
+  {
+    name: "migrate:fresh",
+    description:
+      "Drops all entities from the database and re-runs all migrations from scratch.",
+  },
 ];
 
 const payloadConfig = await loadConfig();
@@ -50,21 +71,5 @@ for (const command of availableCommands) {
     .description(command.description)
     .action(action(payload));
 }
-
-// program
-//   .command("migrate:fresh")
-//   .description("Reset the database")
-//   .action(async (options) => {
-//     const config = await loadConfig();
-//     const payload = await getPayload({ config });
-//     const adapter = payload.db;
-
-//     if (!adapter) {
-//       throw new Error("No database adapter found");
-//     }
-//     await adapter.migrateFresh({ forceAcceptWarning: false });
-//     process.exit(0);
-//     // Your migration logic here...
-//   });
 
 program.parse();
