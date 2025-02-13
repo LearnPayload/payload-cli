@@ -1,0 +1,13 @@
+import { Payload } from "payload";
+
+export default function (payload: Payload) {
+  return async function (options: any) {
+    const adapter = payload.db;
+
+    if (!adapter) {
+      throw new Error("No database adapter found");
+    }
+    await adapter.migrateFresh({ forceAcceptWarning: false });
+    process.exit(0);
+  };
+}

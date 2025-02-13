@@ -1,0 +1,20 @@
+{
+  "name": "payload-cli",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "payload": "./src/index.ts"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "ts-node": "^10.9.2"
+  },
+  "peerDependencies": {
+    "payload": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.2",
+    "payload": "^3.23.0",
+    "typescript": "^5.7.3"
+  }
+}
