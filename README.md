@@ -118,7 +118,7 @@ Taking inspiration from Laravel's Artisan CLI, we plan to expand this tool's cap
 - 💬 [Payload Discord Community](https://discord.com/invite/payload)
 - 🤝 [Payload Community Forum](https://community.payloadcms.com/)
 
-For issues specific to this CLI tool, please use the [GitHub issue tracker](link-to-your-repo).
+For issues specific to this CLI tool, please use the [GitHub issue tracker](https://github.com/LearnPayload/payload-cli).
 
 ## Contributing
 

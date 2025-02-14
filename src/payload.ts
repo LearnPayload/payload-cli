@@ -44,6 +44,8 @@ const payload = await getPayload({ config: payloadConfig });
 
 const program = new Command();
 
+program.version("0.0.2");
+
 async function loadConfig() {
   const configPath = path.join(process.cwd(), "src", "payload.config.ts");
   if (!fs.existsSync(configPath)) {
