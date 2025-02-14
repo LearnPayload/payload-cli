@@ -1,9 +1,9 @@
 {
-  "name": "payload-cli",
+  "name": "@learnpayload/payload-cli",
   "version": "0.0.1",
   "type": "module",
   "bin": {
-    "payload": "./src/payload.ts"
+    "payload": "src/payload.ts"
   },
   "dependencies": {
     "commander": "^13.1.0"
@@ -14,5 +14,8 @@
   "devDependencies": {
     "@types/node": "^22.13.2",
     "payload": "^3.23.0"
-  }
+  },
+  "author": "Colyn Brown <colyn.brown@gmail.com>",
+  "license": "MIT",
+  "description": "An experimental CLI tool for Payload CMS projects"
 }
