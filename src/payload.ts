@@ -33,6 +33,10 @@ const availableCommands = [
     description:
       "Drops all entities from the database and re-runs all migrations from scratch.",
   },
+  {
+    name: "db:seed",
+    description: "Runs any seeders that are in the db folder.",
+  },
 ];
 
 const payloadConfig = await loadConfig();
